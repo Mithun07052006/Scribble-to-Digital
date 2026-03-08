@@ -1,0 +1,2 @@
+# Scribble-to-Digital
+**Scribble to Digital** is the process of converting rough hand-drawn sketches or handwritten notes into clean, editable digital graphics using software or apps. It allows ideas drawn on paper to be refined, organized, and shared easily in a digital format. ✏️➡️💻
