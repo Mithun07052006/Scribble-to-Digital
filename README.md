@@ -1,111 +1,92 @@
-# Scribble to Digital 
+# 📝 Scribble to Digital
 
-**Scribble to Digital** is an AI-powered application that converts rough hand-drawn sketches or handwritten notes into clean digital content. Using computer vision and AI models, the system detects shapes, text, and structures from an image and transforms them into organized digital formats such as editable text, diagrams, or structured data.
+Messy Notes Image → Clean Text + To-Do List
 
----
+## 🔧 Tech Stack
 
-# Features 
+- **Python** – Core language
+- **Streamlit** – UI framework
+- **OpenCV** – Image enhancement
+- **Pytesseract** – OCR text extraction
+- **GenAI API** (OpenAI) – Context correction & task extraction
 
-* Upload handwritten notes or sketches
-* Detect shapes and edges from scribbles
-* Convert drawings into digital structure
-* Generate structured output (JSON format)
-* Simple web interface using Streamlit
+## 📂 Project Structure
 
----
-
-# Tech Stack 
-
-* Python
-* OpenCV
-* Pillow
-* Streamlit
-* AI Vision APIs from **OpenAI**
-
----
-
-# Quick Start (Local Setup)
-
-### 1. Clone Repository
-
-```bash
-git clone https://github.com/your-username/scribble-to-digital.git
-cd scribble-to-digital
+```
+scribble_to_digital/
+│
+├── app.py
+├── requirements.txt
+├── utils.py
+└── README.md
 ```
 
-### 2. Install Dependencies
+## 📦 Installation
+
+Install required dependencies:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### 3. Run Application
+**Note:** You also need Tesseract OCR installed on your system:
+- **Windows:** Download from [GitHub - UB-Mannheim/tesseract](https://github.com/UB-Mannheim/tesseract/wiki)
+- **Mac:** `brew install tesseract`
+- **Linux:** `sudo apt-get install tesseract-ocr`
+
+## 🔑 Set GenAI API Key
+
+### Windows (PowerShell)
+```powershell
+setx OPENAI_API_KEY "your_api_key_here"
+```
+
+### Mac/Linux
+```bash
+export OPENAI_API_KEY="your_api_key_here"
+```
+
+## 🧠 Functionalities Breakdown
+
+### 1️⃣ OCR Enhancement (Brighten + Clean Image)
+- Improves messy notes before OCR processing
+- Uses OpenCV to enhance contrast and clarity
+- Applies binary thresholding for optimal text extraction
+
+### 2️⃣ Contextual Logic (GenAI)
+- Fixes wrong words detected by OCR
+- Repairs broken sentences
+- Corrects spelling errors using context
+
+### 3️⃣ To-Do Extraction
+- Separates tasks from general notes
+- Identifies action items
+- Organizes output in a structured format
+
+## ▶️ Run the App
 
 ```bash
 streamlit run app.py
 ```
 
-The app will open at:
+The app will open in your browser at `http://localhost:8501`
 
-```
-http://localhost:8501
-```
+## 📝 How It Works
 
----
+1. **Upload** a messy handwritten notes image
+2. **View** the original and enhanced versions
+3. **Extract** raw OCR text
+4. **Click** "Convert to Digital" to:
+   - Clean the text using AI
+   - Extract and organize to-do items
+   - Generate formatted output
 
-# Deployment 
+## 🛠️ File Descriptions
 
-This project is deployed using **Streamlit**.
-
-### Deploy Steps
-
-1. Push your project to **GitHub**
-2. Open **Streamlit Community Cloud**
-3. Connect your GitHub repository
-4. Select `app.py`
-5. Click **Deploy**
-
-Your application will be available through a public link.
+- **app.py** – Main Streamlit application with UI and workflow
+- **utils.py** – Helper functions for image enhancement and text extraction
+- **requirements.txt** – Python dependencies
 
 ---
 
-# Example Output (JSON)
-
-```json
-{
-  "input_image": "scribble.jpg",
-  "detected_elements": {
-    "text": ["Login Page", "Username", "Password"],
-    "shapes": ["rectangle", "button"],
-    "diagram_type": "UI wireframe"
-  },
-  "digital_output": {
-    "layout": "login_form",
-    "fields": ["username", "password"],
-    "actions": ["login_button"]
-  }
-}
-```
-
----
-
-# Project Structure 
-
-```
-scribble-to-digital
-│
-├── app.py
-├── requirements.txt
-├── Dockerfile
-├── README.md
-└── sample_images
-```
-
----
-
-# Notes 
-
-* Works best with clear handwritten sketches
-* Image preprocessing improves detection accuracy
-* Can integrate OCR tools like **Tesseract OCR**
-* Suitable for wireframes, diagrams, and handwritten notes
+Made with ❤️ for cleaner notes!
