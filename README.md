@@ -1,10 +1,10 @@
-# Scribble to Digital ✏️➡️💻
+# Scribble to Digital 
 
 **Scribble to Digital** is an AI-powered application that converts rough hand-drawn sketches or handwritten notes into clean digital content. Using computer vision and AI models, the system detects shapes, text, and structures from an image and transforms them into organized digital formats such as editable text, diagrams, or structured data.
 
 ---
 
-# Features 🚀
+# Features 
 
 * Upload handwritten notes or sketches
 * Detect shapes and edges from scribbles
@@ -14,7 +14,7 @@
 
 ---
 
-# Tech Stack 🛠️
+# Tech Stack 
 
 * Python
 * OpenCV
@@ -53,7 +53,7 @@ http://localhost:8501
 
 ---
 
-# Deployment 🌐
+# Deployment 
 
 This project is deployed using **Streamlit**.
 
@@ -89,7 +89,7 @@ Your application will be available through a public link.
 
 ---
 
-# Project Structure 📂
+# Project Structure 
 
 ```
 scribble-to-digital
@@ -103,20 +103,9 @@ scribble-to-digital
 
 ---
 
-# Notes 📌
+# Notes 
 
 * Works best with clear handwritten sketches
 * Image preprocessing improves detection accuracy
 * Can integrate OCR tools like **Tesseract OCR**
 * Suitable for wireframes, diagrams, and handwritten notes
-
----
-
-⭐ If you like this project, consider giving it a star on GitHub!
-
----
-
-If you want, I can also give:
-
-* **a more professional GitHub README (with badges, demo images, and architecture diagram)**
-* **a README that looks like top AI GitHub projects** (very impressive for portfolio).
